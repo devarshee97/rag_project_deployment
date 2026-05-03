@@ -30,7 +30,7 @@ Answer the question based on the above context: {question}
 
 
 
-embedding_function = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
+embedding_function = OpenAIEmbeddings()
 db = Chroma(persist_directory=CHROMA_PATH, embedding_function=embedding_function)
 
 """def main():
