@@ -28,12 +28,9 @@ Answer the question based only on the following context:
 Answer the question based on the above context: {question}
 """
 
-load_dotenv()
-
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 
-embedding_function = OpenAIEmbeddings()
+embedding_function = OpenAIEmbeddings(openai_api_key=OPENAI_API_KEY)
 db = Chroma(persist_directory=CHROMA_PATH, embedding_function=embedding_function)
 
 """def main():

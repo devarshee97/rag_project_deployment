@@ -4,7 +4,6 @@ from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import Chroma
 from langchain_community.document_loaders import PyPDFDirectoryLoader
 from langchain_core.documents import Document
-from dotenv import load_dotenv
 import os
 import shutil
 
@@ -49,7 +48,7 @@ def split_documents(documents: list[Document]):
 
 def add_to_chroma(chunks: list[Document]):
     # Load the existing database.
-    embedding_function = OpenAIEmbeddings()
+    embedding_function = OpenAIEmbeddings(openai_api_key = OPENAI_API_KEY)
     db = Chroma(
         persist_directory=CHROMA_PATH, embedding_function=embedding_function
     )
