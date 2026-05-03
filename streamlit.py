@@ -4,7 +4,7 @@ import requests
 # ----------------------------
 # Backend API URL (Render)
 # ----------------------------
-API_URL = "https://rag-project-deployment.onrender.com/query"
+API_URL = "https://rag-for-documents.onrender.com/query"
 
 # ----------------------------
 # UI Config
