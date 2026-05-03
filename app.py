@@ -2,14 +2,33 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from query_rag import query_rag  
 from create_and_populate_db import create_and_populate_db # your existing function
-
+from dotenv import load_dotenv
+from fastapi.middleware.cors import CORSMiddleware
+import os
 # Initialize FastAPI app
+load_dotenv()
+
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
 
 app = FastAPI(
     title="RAG API",
     description="API for querying documents using a RAG pipeline",
     version="1.0"
 )
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # tighten later in production
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
+
+
+
 
 # 🔥 Run ingestion at startup (correct way)
 @app.on_event("startup")
@@ -26,6 +45,8 @@ class QueryRequest(BaseModel):
 @app.get("/")
 def home():
     return {"status": "RAG API is running"}
+
+
 
 
 @app.post("/query")
