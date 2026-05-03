@@ -12,9 +12,9 @@ from dotenv import load_dotenv
 import argparse
 import os
 
-load_dotenv()
+#load_dotenv()
 
-
+from config import CHROMA_PATH, DATA_PATH, OPENAI_API_KEY
 
 CHROMA_PATH = "chroma"
 

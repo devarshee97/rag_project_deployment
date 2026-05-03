@@ -8,14 +8,11 @@ from dotenv import load_dotenv
 import os
 import shutil
 
-CHROMA_PATH = "chroma"
-DATA_PATH = "data"
+from config import CHROMA_PATH, DATA_PATH, OPENAI_API_KEY
 import os
 
 
-load_dotenv()
 
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 
 

@@ -6,9 +6,9 @@ from dotenv import load_dotenv
 from fastapi.middleware.cors import CORSMiddleware
 import os
 # Initialize FastAPI app
-load_dotenv()
-
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+#load_dotenv()
+from config import CHROMA_PATH, DATA_PATH, OPENAI_API_KEY
+#OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 
 app = FastAPI(
