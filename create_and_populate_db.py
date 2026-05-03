@@ -2,13 +2,11 @@ from langchain_community.document_loaders import DirectoryLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings
 from langchain_community.vectorstores import Chroma
-import openai 
 from langchain_community.document_loaders import PyPDFDirectoryLoader
 from langchain_core.documents import Document
 from dotenv import load_dotenv
 import os
 import shutil
-import argparse
 
 CHROMA_PATH = "chroma"
 DATA_PATH = "data"
