@@ -11,3 +11,4 @@ pypdf
 streamlit
 requests
 pydantic
+pysqlite3-binary
