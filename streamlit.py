@@ -6,6 +6,7 @@ import requests
 # ----------------------------
 API_URL = "https://rag-for-documents.onrender.com/query"
 
+#api url corrected
 # ----------------------------
 # UI Config
 # ----------------------------
