@@ -13,7 +13,9 @@ import argparse
 import os
 
 #load_dotenv()
-
+import pysqlite3
+import sys
+sys.modules["sqlite3"] = pysqlite3
 from config import CHROMA_PATH, DATA_PATH, OPENAI_API_KEY
 
 CHROMA_PATH = "chroma"
