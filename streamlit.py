@@ -4,6 +4,7 @@ import requests
 # ----------------------------
 # Backend API URL (Render)
 # ----------------------------
+
 API_URL = "https://ragdeployment-d9c7h4bpf7a4dcd7.centralindia-01.azurewebsites.net/query"
 
 #api url corrected
