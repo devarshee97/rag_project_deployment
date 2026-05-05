@@ -10,7 +10,7 @@ API_URL = "https://ragdeployment-d9c7h4bpf7a4dcd7.centralindia-01.azurewebsites.
 # ----------------------------
 # UI Config
 # ----------------------------
-#st.set_page_config(page_title="RAG Chat", page_icon="🤖")
+st.set_page_config(page_title="RAG Chat", page_icon="🤖")
 st.title("📄 RAG Document Assistant")
 
 st.write("Ask questions based on your documents")
